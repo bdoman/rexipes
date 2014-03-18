@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+$accent1: #912702; //Rust
+$accent2: #003D53; //Steel
+
+$body-color: #3f5164;
+
+$gray: #9FA8B2;
+$dark-gray: darken($gray, 20%); 
+//use sass to quickly get different colors by lighten/darken
+
+$body-color: #3f5164;
+$bkg-wrapper: #D2D5D8;
+$bkg-container: #FFFFFF;
+$bkg-accent: #CCC;
+
+$border-color: #e7e9eb;
