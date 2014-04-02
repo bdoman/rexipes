@@ -30,26 +30,16 @@
   
   <fieldset>
      <!-- We can add an unlimited number of "filter groups" using the following format: -->
-    <div class="checkbox">
-      <input type="checkbox" value=".adventurous"/>
-      <label>Adventurous</label>
-    </div>
-    <div class="checkbox">
-      <input type="checkbox" value=".in-a-rut"/>
-      <label>In a Rut</label>
-    </div>
-    <div class="checkbox">
-      <input type="checkbox" value=".hungry"/>
-      <label>Hungry</label>
-    </div>
-    <div class="checkbox">
-      <input type="checkbox" value=".introspective"/>
-      <label>Introspective</label>
-    </div>
-    <div class="checkbox">
-      <input type="checkbox" value=".drunk"/>
-      <label>Drunk</label>
-    </div>
+    
+    <?php $tags = get_tags();
+$html = '';
+foreach ( $tags as $tag ) {
+    $html .= ' <div class="checkbox"><input type="checkbox" value=".'. $tag->slug .'"/><label>'. $tag->name . '</label></div>';
+     
+  }
+
+ echo $html;
+?>
 
   </fieldset>
    <!-- <button id="Reset">Clear Filters</button> -->
