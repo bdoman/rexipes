@@ -46,6 +46,10 @@
       <input type="checkbox" value=".introspective"/>
       <label>Introspective</label>
     </div>
+    <div class="checkbox">
+      <input type="checkbox" value=".drunk"/>
+      <label>Drunk</label>
+    </div>
 
   </fieldset>
    <!-- <button id="Reset">Clear Filters</button> -->

@@ -7,7 +7,7 @@ Template Name: Build Template
 
         <section id="BuildSection">
                     <div class="content">
-                        <form name="contactform" method="post" action="send_form_email.php">
+                        <form name="contactform" method="post" action="/send_form_email.php">
                             <div class="step step_one">
                                 <h2>Step 1: <span class="step-title">Head Space</span></h2>
                                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, non, quia recusandae quis placeat repudiandae eos quaerat voluptas iure aspernatur ut hic molestias fugit maxime beatae tenetur ad. Odio, exercitationem!</p>
