@@ -20,7 +20,7 @@
   <script type="text/javascript" src="//use.typekit.net/kwc2fsi.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   
-   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
+   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>  
 <body <?php body_class(); ?>>  
  
@@ -28,7 +28,7 @@
             <div class="container">
                 <header>
                     <div class="content">
-                    <h1>Rexip.es!</h1>
+                    <h1><a href="/">Rexip.es</a></h1>
                         <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container' => 'nav', 'container_id' => 'MainNav', 'theme_location' => 'primary-menu' ) ); ?>
                     </div>
                 </header>

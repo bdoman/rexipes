@@ -21,8 +21,8 @@ Template Name: Build Template
                                     <tr>
                                         <td class="counter-cell"><span class="step-counter">Step 1:</span></td>
                                         <td class="step-cell"><input type="text"  name="comments[]"   value="test" ></td>
-                                        <td class="icon-cell"><a href="#" data-action="add">Add</a></td>
-                                        <td class="icon-cell"><a href="#" data-action="delete">Remove</a></td>
+                                        <td class="icon-cell"><a href="#" data-action="add" class="add">Add</a></td>
+                                        <td class="icon-cell"><a href="#" data-action="delete" class="delete">Remove</a></td>
                                     </tr> 
                                 </table>
                             </div>
