@@ -158,12 +158,11 @@ strong {
 
 			}
 			&:hover {
-				background-color: #000;
 				@include transition(all 0.2s ease-in-out 0s);
 			}
 		}
 		a {
-		
+			color: #fff;
 
 		}
 	}
@@ -472,6 +471,15 @@ td {
 
 tr:nth-child(1) .delete {
 	display: none;
+}
+
+.icon-cell a.delete {
+	background-color: $accent1;
+	border-bottom: 6px solid darken($accent1, 5%);
+	&:hover {
+		background-color: lighten($accent1, 10%);
+		border-bottom: 6px solid lighten($accent1, 5%);
+	}
 }
 
 .step-cell {

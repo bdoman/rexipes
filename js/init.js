@@ -45,7 +45,7 @@ var checkboxFilter = {
     });
     
     self.$reset.on('click', function(e){
-e.preventDefault();
+    //e.preventDefault();
       self.$filters[0].reset();
       self.parseFilters();
     });
@@ -160,7 +160,7 @@ checkboxFilter.init();
     }
   });    
 
-$('body').on('click', 'a', '.icon-cell', function(e) {
+$('body').on('click', '.cell-btn', function(e) {
 	e.preventDefault();
 
     var jqEl = $(e.currentTarget);

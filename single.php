@@ -4,7 +4,7 @@
     <div class="content">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <?php
-                $headspaces = get_field('headspace');
+                 $posttags = get_the_tags();
                 
             ?>
                 <article>
@@ -13,14 +13,16 @@
                     <div class="headspaces">
                         <span class="title">For when you're feeling...</span>
                     <h3>
-                    <?php $output = ''; ?>
-                    <?php foreach( $headspaces as $headspace ): ?>
- 
-                        <?php $output = $output . $headspace->name . ', ';?>
+                    <?php
                         
-                    <?php endforeach; ?>
-                    <?php $output = substr($output, 0, -2);
-                     echo $output;?>
+                        if ($posttags) {
+                        foreach($posttags as $tag) {
+                             $output = $output . $tag->name . ', ';
+                             
+                            }
+                        }
+                         $output = rtrim($output, ", \t\n");
+                        echo $output; ?>
                      </h3>
                  </div>
                  <div class="number">
