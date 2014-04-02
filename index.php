@@ -3,7 +3,7 @@
   
         <div class="content">
         
-            <p>Rexip.es are experiences blah blah this is where you could do a little intro pitch about just what exactly we're looking it. So, there was that.<br />Then a call to action!</p>
+            <p>Rexip.es are step-by-step experience guides meant to capture and share meaningful moments from our lives.<br />Find something new or add your own.</p>
             <div class="callout">
                 <a href="/" class="btn"><span class="text">Explore</span><span class="icon">!</span></a>
                 <a href="/about" class="btn"><span class="text">Learn More</span><span class="icon">?</span></a>
@@ -19,10 +19,10 @@
 
         <div class="filter-bar">
         <div class="filter-closed open clear">
-          <h4>Let's explore some experiences!</h4> <a class="btn-small filter-btn">Filter +</a>
+          <h4>Explore the experiences!</h4> <a class="btn-small filter-btn">Filter +</a>
         </div>
         <div class="filter-open clear">
-          <h4>Tell us how you're feeling...</h4> <a class="btn-small close-btn">X</a>
+          <h4>So how you're feeling...</h4> <a class="btn-small close-btn">X</a>
         </div>
         <div class="filter-expand">
         <form class="controls" id="Filters">

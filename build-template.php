@@ -10,11 +10,11 @@ Template Name: Build Template
                         <form name="contactform" method="post" action="/send_form_email.php">
                             <div class="step step_one">
                                 <h2>Step 1: <span class="step-title">Head Space</span></h2>
-                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, non, quia recusandae quis placeat repudiandae eos quaerat voluptas iure aspernatur ut hic molestias fugit maxime beatae tenetur ad. Odio, exercitationem!</p>
+                                <p class="description">What mood might someone be in to want to experience this rexipe?</p>
                             </div>
                             <div class="step step_two">
                                 <h2>Step 2: <span class="step-title">The Steps</span></h2>
-                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odio sapiente non error officiis. Adipisci, incidunt commodi sunt quo cum esse corporis alias id explicabo inventore error omnis expedita ea?</p>
+                                <p class="description">Walk us through each step of the experience.</p>
                                 <table>
                                 
                                 
@@ -28,13 +28,13 @@ Template Name: Build Template
                             </div>
                             <div class="step step_three">
                                 <h2>Step 3: <span class="step-title">The Name</span></h2>
-                                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, iure, quam, aliquid eum asperiores repellendus est reiciendis nam saepe reprehenderit sint fugiat doloremque quia eius esse nostrum vero delectus libero.</p>
+                                <p class="description">Give your rexipe a title.</p>
                                 <input type="text"  name="title"   value="test" >
                                     
                                 
                             </div>
                             <input type="hidden" name="email" value="hello@brandondoman.com">
-                            <input type="submit" name="submit" value="All Done? Send in your Experience!" class="btn" />
+                            <input type="submit" name="submit" value="All Done? Send it in! You should see it on the site soon." class="btn" />
                         </form>
 
 
