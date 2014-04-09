@@ -123,6 +123,7 @@ a {
 	&:visited {
 		color: #fff;
 	}
+	
 }
 
 p {
@@ -273,12 +274,25 @@ header {
 	display: inline-block;
 	margin-bottom:2.5%;
 	@include border-radius(1px);
+	@include transition (all 0.3s);
 	
 	
 	background-color: $bkg-blocks;
 	//@include transition(all 0.4s ease-in-out);
 	
 	position: relative;
+	@include breakpoint(max-width 920px) {
+		width: 48%;
+
+	}
+
+	@include breakpoint(max-width 550px) {
+		width: 100%;
+
+	}
+
+
+
 	a {
 
 		color: #000;
@@ -351,7 +365,7 @@ header {
 	color: #fff;
 	font-size: 30px;
 	padding: 20px;
-	@include transition(all .2s);
+	@include transition(all 0.2s);
 	font-family: "jaf-domus-titling-web",sans-serif;
 	&:hover {
 		background-color: lighten($accent2,10%);
@@ -367,7 +381,7 @@ header {
 	color: #fff;
 	font-size: 14px;
 	padding: 5px;
-	@include transition(all .2s);
+	@include transition(all 0.2s);
 	font-family: "jaf-domus-titling-web",sans-serif;
 	&:hover {
 		background-color: lighten($accent2,10%);
@@ -377,12 +391,15 @@ header {
 
 .callout {
 	float: right;
+	@include transition (all 0.3s);
 	//text-align: center;
+	
 	a {
 		display: block;
 		margin-bottom: 10px;
 		padding: 0;
 		text-align: left;
+		
 		.icon {background-color: rgba(255,255,255,.1);
 			display: inline-block;
 			height:100%;
@@ -398,10 +415,15 @@ header {
 			padding: 20px;
 		}
 	}
+	@include breakpoint(max-width 970px) {
+		float: none;
+
+	}
 }
-section {padding: 100px 0;}
+section {padding: 100px 0;
+@include transition (all 0.3s);}
 .intro {
-	
+	@include transition (all 0.5s);
 
 	
 	background: url('img/bkg-tree.jpg');
@@ -417,6 +439,13 @@ section {padding: 100px 0;}
 		float: left;
 		height: 230px;
 		margin-bottom: 0;
+		@include transition (all 0.3s);
+		@include breakpoint(max-width 970px) {
+			margin-bottom: 10px;
+			width: 100%;
+			float: none;
+			height: auto;
+		}
 	}
 	//border-bottom: 1px dashed #acacac;
 
@@ -443,7 +472,7 @@ input {
 	font-size: 24px;
 	color: #666;
 	font-family: "alegreya";
-	@include transition(all .3s);
+	@include transition(all 0.3s);
 	border: 1px solid rgba(81, 203, 238, .3);
 }
 
@@ -500,7 +529,7 @@ tr:nth-child(1) .delete {
 		display: block;
 		height: 100%;
 		
-		@include transition(all .2s);
+		@include transition(all 0.2s);
 		&:hover {
 			background-color: lighten($accent2,10%);
 			border-bottom: 6px solid lighten($accent2,5%);
@@ -574,11 +603,19 @@ footer {
 	h4 {
 		display: inline-block;
 		float: left;
+		@include breakpoint(max-width 450px){
+			float: none;
+			display: block;
+		}
 	}
 
 	.filter-btn {
 		float: right;
 		cursor: pointer;
+		@include breakpoint(max-width 450px){
+			float: none;
+			display: block;
+		}
 	}
 }
 
@@ -696,3 +733,86 @@ fieldset{
   background: #fefefe;
 }
 
+.headspace-item {
+	white-space: nowrap; 
+	background-color: rgba(190,190,190,.3);
+	width: auto;
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+	color: #fff;
+	@include transition(all 0.5s);
+	margin-bottom: 10px;
+}
+.tag {
+	background-color: transparent;
+	border: none;
+	display: inline-block;
+	width: auto;
+	font-size:14px;
+	padding: 0;
+	height: 100%;
+	margin: 0 0 0 32px;
+	border: none;
+	outline: none;
+	&:focus {
+		outline: 0 none !important;
+		box-shadow: none !important;
+		border: none !important;}
+}
+
+a.remove {color: $accent1;
+	padding: 0 5px;
+	background-color: rgba(190,190,190,.2);
+	display: inline-block;
+	font-family: "jaf-domus-titling-web",sans-serif;
+	font-weight: 100;
+	position:absolute;
+	top: 0;
+	left: 0;
+	font-size: 12px;
+	line-height: 1.5;
+	height: 100%;
+}
+.headspace-left {
+	float: left;
+	width: 50%;
+	padding-right: 50px;
+	height: 100%;
+	@include breakpoint(max-width 600px) {
+		width: 100%;
+	}
+
+}
+.headspace-right {
+	float: right;
+	width: 50%;
+	@include breakpoint(max-width 600px) {
+		width: 100%;
+	}
+
+}
+#CommonTags {
+	
+
+	
+	.checkbox {
+		margin: 0 0 10px 0;
+		display: inline-block;
+		width: 45%;
+
+		
+		
+	}
+}
+
+.btn.success {
+	background-color: #4F861F;
+	border-bottom: 6px solid darken(#4F861F, 10%);
+}
+
+.dim {
+	color: #ACACAC;
+	font-size: 22px;
+	font-style: italic;
+}

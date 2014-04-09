@@ -134,21 +134,166 @@ var checkboxFilter = {
       }
   }
 };
-  
-// On document ready, initialise our code.
 
-$(function(){
-      
-  // Initialize checkboxFilter code
-      
+var titleCase = function(str, glue){
+    glue = (glue) ? glue : ['of', 'for', 'and', 'a'];
+    return str.replace(/(\w)(\w*)/g, function(_, i, r){
+        var j = i.toUpperCase() + (r != null ? r : "");
+        return (glue.indexOf(j.toLowerCase())<0)?j:j.toLowerCase();
+    });
+};
   
-});
+var headspaceTags = {
+  $commonTags: null,
+  $commonTagClicked: '',
+  $checkboxTarget: null,
+  init: function() {
+    var self = this;
+    self.$commonTags = $('#CommonTags').find('input');
+    $tagContainer = $('.selected-headspaces');
+    self.bindHandlers();
+  },
+  bindHandlers: function(){
+    var self = this;
+    
+    self.$commonTags.on('change', function(){
+      $this = $(this),
+      tag = $this.val(),
+      tag = $.trim(tag);
+      tagTarget = $('.tag[value="' + tag + '"]').parent('span');
+      if($this.is(':checked')) {
+        self.addCommonTag(tag);
+      } else {
+        
+        self.removeTag(tag, tagTarget);
+      }
+   
+    });
+    self.checkEmpty();
+
+  },
+  checkTags: function(){
+    var self = this,
+    tag = $this.val(),
+    tag = $.trim(tag);
+    tag = titleCase(tag);
+
+    //Check to see if it's a common tag
+
+    if ($('input[type=checkbox][value="' + tag + '"]').length) {
+        $checkboxTarget = $('input[type=checkbox][value="' + tag + '"]');
+        
+        if ($checkboxTarget.is(':checked')){
+          
+          
+        } else {
+          $checkboxTarget.prop('checked', true);
+          self.addCommonTag(tag);
+          
+        }
+
+
+      } // If it's not a common tag... 
+      else {
+
+        if ($('.tag[value="' + tag + '"]').length) { 
+         
+          //It already exists, so do nothing!
+          
+          } else {
+            
+            self.addCustomTag(tag);
+            
+          }
+
+       
+      }
+     
+self.checkEmpty();
+    
+  },
+  addCommonTag: function(tag){
+      var self = this;
+      newTag = '<span class="headspace-item"><a href="#" class="remove">x</a><input type="text" name="customheadspace[]" class="tag" value="' + tag + '" size="' + 
+      tag.length + ' readonly"></span>';
+      $tagContainer.append(newTag);
+      self.checkEmpty();
+
+  },
+  addCustomTag: function(tag){
+    var self = this;
+      newTag = '<span class="headspace-item"><a href="#" class="remove">x</a><input type="text" name="customheadspace[]" class="tag" value="' + tag + '" size="' + 
+      tag.length + ' readonly"></span>';
+      $tagContainer.append(newTag);
+      self.checkEmpty();
+  },
+  removeTag: function(tag, target){
+    var self = this;
+    console.log('initiate remove');
+    if ($('input[type=checkbox][value="' + tag + '"]').length) {
+        $checkboxTarget = $('input[type=checkbox][value="' + tag + '"]');
+        console.log('common tag!');
+        if ($checkboxTarget.is(':checked')){
+          $checkboxTarget.prop('checked', false);
+          
+        }
+        
+
+      } 
+    target.remove();
+    self.checkEmpty();
+
+  },
+  checkEmpty: function() {
+    var self = this;
+    if ($('.tag').length) {
+      $('.empty').hide();
+    } else {
+      $('.empty').show();
+    }
+  }
+}
 
 
 $( document ).ready(function() {
-checkboxFilter.init();
+  headspaceTags.init();
+  $('#in').on('keypress keydown keyup', function(e) {
+    
+    if (e.which == 13) {
+      e.preventDefault();
+        
+      $this = $(this);
+      if ($this.val().length > 0) {
+      headspaceTags.checkTags();
+    }
       
+    
+    $this.val('');
+    return false;
+    }
+  });
+
+  $('.add-headspace').on('click', function(e){
+    e.preventDefault();
+    $this = $(this).parents('tr').find('input');
+    if ($this.val().length > 0) {
+      headspaceTags.checkTags();
+    }
+      
+    
+    $this.val('');
+  });
+
+  $('body').on('click', '.remove', function(e){
+    e.preventDefault();
+    $this = $(this).parent('span');
+    tag = $this.find('input').val();
+    headspaceTags.removeTag(tag, $this);
+  });
+
   // Instantiate MixItUp
+
+  checkboxFilter.init();
       
   $('.grid').mixItUp({
     controls: {
@@ -160,55 +305,62 @@ checkboxFilter.init();
     }
   });    
 
-$('body').on('click', '.cell-btn', function(e) {
-	e.preventDefault();
+  $('body').on('click', '.cell-btn', function(e) {
+  	e.preventDefault();
 
-    var jqEl = $(e.currentTarget);
-    var tag = jqEl.closest('tr');
-    switch (jqEl.attr("data-action")) {
-    case "add":
-        tag.after(tag.clone().find("input").val("").end());
-
-        break;
-    case "delete":
-        tag.remove();
-        break;
+      var jqEl = $(e.currentTarget);
+      var tag = jqEl.closest('tr');
+      switch (jqEl.attr("data-action")) {
+      case "add":
+          tag.after(tag.clone().find("input").val("").end());
+          break;
+      case "delete":
+          tag.remove();
+          break;
+      }
+      var n = $( ".step-counter" ).length;
+      $('.step-counter').each( function(i){
+      	n = i + 1;
+      	$(this).html('Step ' + n + ':')
+      });
+      return false;
     }
-    var n = $( ".step-counter" ).length;
-    $('.step-counter').each( function(i){
-    	n = i + 1;
-    	$(this).html('Step ' + n + ':')
-    });
-
-    return false;
-}
-
-
-
-
-	);
-
+  );
 
 // Filter Buttons 
 
-$('body').on('click', '.filter-btn', function(){
+  $('body').on('click', '.filter-btn', function(){
     $('.filter-closed').fadeOut('fast').promise().done( function(){
-        $('.filter-open').fadeIn('fast').promise().done( function(){
-            $('.filter-expand').slideDown('fast');
-        });
+      $('.filter-open').fadeIn('fast').promise().done( function(){
+        $('.filter-expand').slideDown('fast');
+      });
     });
+  });
 
-    
-});
-
-$('body').on('click', '.close-btn', function(){
+  $('body').on('click', '.close-btn', function(){
     $('.filter-expand').slideUp('fast').promise().done( function(){
-        $('.filter-open').fadeOut('fast').promise().done( function(){
-            $('.filter-closed').fadeIn('fast')
-        });
+      $('.filter-open').fadeOut('fast').promise().done( function(){
+        $('.filter-closed').fadeIn('fast')
+      });
     });
+  });
 
-    
-});
+// Headspace Tags
+
+$('#Rexipe').submit(function (e) {
+  e.preventDefault();
+  $.ajax({
+    type: 'post',
+    url: '/send_form_email.php',
+    data: $(this).serialize(),
+    success: function () {
+      $(':submit').attr('disabled', 'disabled');
+      $(':submit').val('Rexipe Submitted!');
+      $(':submit').addClass('success');
+    }
+  });
+})
+
+  
 
 });
