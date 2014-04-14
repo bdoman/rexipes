@@ -652,7 +652,8 @@ fieldset{
   display: inline-block;
   position: relative;
   cursor: pointer;
-  margin: 0 50px 8px 0;
+  width: 24%;
+  margin-bottom:10px;
 }
 
 .checkbox input[type="checkbox"]{
@@ -824,7 +825,13 @@ a.remove {color: $accent1;
     /* line 603, sass/style.scss */
     .filter-closed h4 {
       float: none;
-      display: block; } }
+      display: block; } 
+
+.checkbox {
+	width: 100%;
+}
+
+  }
 /* line 612, sass/style.scss */
 .filter-closed .filter-btn {
   float: right;
@@ -838,7 +845,11 @@ a.remove {color: $accent1;
        @media (max-width: 600px) {
     /* line 777, sass/style.scss */
     .headspace-left {
-      width: 100%; } }
+      width: 100%; }
+
+      .checkbox {
+      	width: 49%;
+      	} }
 
        @media (max-width: 600px) {
     /* line 787, sass/style.scss */

@@ -19,11 +19,9 @@
 
         <div class="filter-bar">
         <div class="filter-closed open clear">
-          <h4>Explore the experiences!</h4> <a class="btn-small filter-btn">Filter +</a>
+          <h4>Explore the experiences!</h4>
         </div>
-        <div class="filter-open clear">
-          <h4>How are you feeling?</h4> <a class="btn-small close-btn">X</a>
-        </div>
+        
         <div class="filter-expand">
         <form class="controls" id="Filters">
 

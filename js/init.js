@@ -327,23 +327,6 @@ $( document ).ready(function() {
     }
   );
 
-// Filter Buttons 
-
-  $('body').on('click', '.filter-btn', function(){
-    $('.filter-closed').fadeOut('fast').promise().done( function(){
-      $('.filter-open').fadeIn('fast').promise().done( function(){
-        $('.filter-expand').slideDown('fast');
-      });
-    });
-  });
-
-  $('body').on('click', '.close-btn', function(){
-    $('.filter-expand').slideUp('fast').promise().done( function(){
-      $('.filter-open').fadeOut('fast').promise().done( function(){
-        $('.filter-closed').fadeIn('fast')
-      });
-    });
-  });
 
 // Headspace Tags
 
