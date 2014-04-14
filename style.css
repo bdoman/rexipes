@@ -803,15 +803,7 @@ header {
   transition: all 0.3s;
   background-color: #efefef;
   position: relative; }
-  @media (max-width: 920px) {
-    /* line 268, sass/style.scss */
-    .experienceBlock {
-      width: 48%; } }
-  @media (max-width: 550px) {
-    /* line 268, sass/style.scss */
-    .experienceBlock {
-      width: 100%; } }
-  /* line 296, sass/style.scss */
+  /* line 290, sass/style.scss */
   .experienceBlock a {
     color: #000;
     width: 100%;
@@ -822,10 +814,10 @@ header {
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     position: absolute; }
-    /* line 303, sass/style.scss */
+    /* line 297, sass/style.scss */
     .experienceBlock a:hover {
       background-color: #d5d5d5; }
-    /* line 306, sass/style.scss */
+    /* line 300, sass/style.scss */
     .experienceBlock a .experienceTitle {
       display: table-cell;
       vertical-align: middle;
@@ -833,7 +825,7 @@ header {
       padding: 5px 10px;
       font-weight: bold;
       overflow: hidden; }
-  /* line 318, sass/style.scss */
+  /* line 312, sass/style.scss */
   .experienceBlock .meta {
     height: 30px;
     background-color: #699FD9;
@@ -850,29 +842,29 @@ header {
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; }
 
-/* line 334, sass/style.scss */
+/* line 328, sass/style.scss */
 .placeholder {
   width: 32%;
   display: inline-block; }
 
-/* line 339, sass/style.scss */
+/* line 333, sass/style.scss */
 .mix {
   display: none; }
 
 /* ==========================================================================
    HeadSpaces
    ========================================================================== */
-/* line 348, sass/style.scss */
+/* line 342, sass/style.scss */
 .skeptical {
   border-bottom: 5px solid #912702; }
-  /* line 350, sass/style.scss */
+  /* line 344, sass/style.scss */
   .skeptical:hover {
     border-bottom: 5px solid #c33503; }
 
 /* ==========================================================================
    Forms
    ========================================================================== */
-/* line 359, sass/style.scss */
+/* line 353, sass/style.scss */
 .btn {
   display: inline-block;
   background-color: #327ccb;
@@ -887,12 +879,12 @@ header {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   font-family: "jaf-domus-titling-web",sans-serif; }
-  /* line 370, sass/style.scss */
+  /* line 364, sass/style.scss */
   .btn:hover {
     background-color: #5a96d6;
     border-bottom: 6px solid #4589d1; }
 
-/* line 377, sass/style.scss */
+/* line 371, sass/style.scss */
 .btn-small {
   display: inline-block;
   background-color: #327ccb;
@@ -905,24 +897,24 @@ header {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   font-family: "jaf-domus-titling-web",sans-serif; }
-  /* line 386, sass/style.scss */
+  /* line 380, sass/style.scss */
   .btn-small:hover {
     background-color: #5a96d6; }
 
-/* line 392, sass/style.scss */
+/* line 386, sass/style.scss */
 .callout {
   float: right;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
-  /* line 397, sass/style.scss */
+  /* line 391, sass/style.scss */
   .callout a {
     display: block;
     margin-bottom: 10px;
     padding: 0;
     text-align: left; }
-    /* line 403, sass/style.scss */
+    /* line 397, sass/style.scss */
     .callout a .icon {
       background-color: rgba(255, 255, 255, 0.1);
       display: inline-block;
@@ -932,17 +924,13 @@ header {
       color: rgba(255, 255, 255, 0.6);
       width: 50px;
       text-align: center; }
-    /* line 412, sass/style.scss */
+    /* line 406, sass/style.scss */
     .callout a .text {
       display: inline-block;
       height: 100%;
       padding: 20px; }
-  @media (max-width: 970px) {
-    /* line 392, sass/style.scss */
-    .callout {
-      float: none; } }
 
-/* line 423, sass/style.scss */
+/* line 414, sass/style.scss */
 section {
   padding: 100px 0;
   -webkit-transition: all 0.3s;
@@ -950,7 +938,7 @@ section {
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 
-/* line 425, sass/style.scss */
+/* line 416, sass/style.scss */
 .intro {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -959,7 +947,7 @@ section {
   background: url("img/bkg-tree.jpg");
   background-size: cover;
   background-position: center center; }
-  /* line 433, sass/style.scss */
+  /* line 424, sass/style.scss */
   .intro p {
     font-size: 1.5em;
     line-height: 2em;
@@ -974,15 +962,8 @@ section {
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s; }
-    @media (max-width: 970px) {
-      /* line 433, sass/style.scss */
-      .intro p {
-        margin-bottom: 10px;
-        width: 100%;
-        float: none;
-        height: auto; } }
 
-/* line 455, sass/style.scss */
+/* line 441, sass/style.scss */
 .explore {
   padding: .5em;
   margin-bottom: 2em;
@@ -993,7 +974,7 @@ section {
   color: #555;
   font-size: 24px; }
 
-/* line 466, sass/style.scss */
+/* line 452, sass/style.scss */
 input {
   display: block;
   width: 100%;
@@ -1007,45 +988,45 @@ input {
   transition: all 0.3s;
   border: 1px solid rgba(81, 203, 238, 0.3); }
 
-/* line 479, sass/style.scss */
+/* line 465, sass/style.scss */
 input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px #51cbee;
   border: 1px solid rgba(81, 203, 238, 0.1); }
 
-/* line 486, sass/style.scss */
+/* line 472, sass/style.scss */
 td {
   padding-bottom: 10px;
   font-size: 22px;
   vertical-align: middle; }
 
-/* line 492, sass/style.scss */
+/* line 478, sass/style.scss */
 .counter-cell {
   white-space: nowrap;
   min-width: 70px;
   padding-right: 10px; }
 
-/* line 501, sass/style.scss */
+/* line 487, sass/style.scss */
 tr:nth-child(1) .delete {
   display: none; }
 
-/* line 505, sass/style.scss */
+/* line 491, sass/style.scss */
 .icon-cell a.delete {
   background-color: #912702;
   border-bottom: 6px solid #782002; }
-  /* line 508, sass/style.scss */
+  /* line 494, sass/style.scss */
   .icon-cell a.delete:hover {
     background-color: #c33503;
     border-bottom: 6px solid #aa2e02; }
 
-/* line 514, sass/style.scss */
+/* line 500, sass/style.scss */
 .step-cell {
   width: 79%; }
 
-/* line 518, sass/style.scss */
+/* line 504, sass/style.scss */
 .icon-cell {
   width: 6%;
   padding-left: 9px; }
-  /* line 521, sass/style.scss */
+  /* line 507, sass/style.scss */
   .icon-cell a {
     background-color: #327ccb;
     border-bottom: 6px solid #2d70b7;
@@ -1060,26 +1041,26 @@ tr:nth-child(1) .delete {
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s; }
-    /* line 533, sass/style.scss */
+    /* line 519, sass/style.scss */
     .icon-cell a:hover {
       background-color: #5a96d6;
       border-bottom: 6px solid #4589d1; }
 
-/* line 540, sass/style.scss */
+/* line 526, sass/style.scss */
 .hidden {
   display: none; }
 
 /* ==========================================================================
    Build Page
    ========================================================================== */
-/* line 547, sass/style.scss */
+/* line 533, sass/style.scss */
 .step {
   margin-bottom: 30px;
   padding: 20px;
   background-color: #f0f0f0;
   border-bottom: 6px solid rgba(190, 190, 190, 0.2); }
 
-/* line 562, sass/style.scss */
+/* line 548, sass/style.scss */
 .step-counter {
   font-family: "alegreya";
   color: #acacac;
@@ -1088,17 +1069,17 @@ tr:nth-child(1) .delete {
 /* ==========================================================================
    Footer
    ========================================================================== */
-/* line 572, sass/style.scss */
+/* line 558, sass/style.scss */
 footer {
   background-color: #000;
   width: 100%;
   border-top: 1px solid #e7e9eb;
   color: #DADADA; }
-  /* line 577, sass/style.scss */
+  /* line 563, sass/style.scss */
   footer a {
     color: #327ccb; }
 
-/* line 582, sass/style.scss */
+/* line 568, sass/style.scss */
 .block {
   width: 31%;
   font-size: 16px;
@@ -1109,50 +1090,40 @@ footer {
 /* ==========================================================================
    Filter Bar
    ========================================================================== */
-/* line 595, sass/style.scss */
+/* line 581, sass/style.scss */
 .filter-bar {
   background-color: #efefef;
   padding: 20px;
   margin-bottom: 1em; }
 
-/* line 603, sass/style.scss */
+/* line 589, sass/style.scss */
 .filter-closed h4 {
   display: inline-block;
   float: left; }
-  @media (max-width: 450px) {
-    /* line 603, sass/style.scss */
-    .filter-closed h4 {
-      float: none;
-      display: block; } }
-/* line 612, sass/style.scss */
+/* line 595, sass/style.scss */
 .filter-closed .filter-btn {
   float: right;
   cursor: pointer; }
-  @media (max-width: 450px) {
-    /* line 612, sass/style.scss */
-    .filter-closed .filter-btn {
-      float: none;
-      display: block; } }
 
-/* line 622, sass/style.scss */
+/* line 602, sass/style.scss */
 .filter-open {
   display: none; }
-  /* line 624, sass/style.scss */
+  /* line 604, sass/style.scss */
   .filter-open h4 {
     display: inline-block;
     float: left; }
-  /* line 628, sass/style.scss */
+  /* line 608, sass/style.scss */
   .filter-open .close-btn {
     float: right;
     background-color: #912702;
     cursor: pointer;
     width: 25px; }
 
-/* line 637, sass/style.scss */
+/* line 617, sass/style.scss */
 .filter-expand {
   display: none; }
 
-/* line 643, sass/style.scss */
+/* line 623, sass/style.scss */
 button {
   display: inline-block;
   vertical-align: top;
@@ -1166,11 +1137,11 @@ button {
   border-radius: 4px;
   cursor: pointer; }
 
-/* line 657, sass/style.scss */
+/* line 637, sass/style.scss */
 button:focus {
   outline: 0 none; }
 
-/* line 661, sass/style.scss */
+/* line 641, sass/style.scss */
 fieldset {
   display: inline-block;
   vertical-align: top;
@@ -1178,14 +1149,14 @@ fieldset {
   padding: .5em;
   border: none; }
 
-/* line 671, sass/style.scss */
+/* line 651, sass/style.scss */
 .checkbox {
   display: inline-block;
   position: relative;
   cursor: pointer;
   margin: 0 50px 8px 0; }
 
-/* line 678, sass/style.scss */
+/* line 658, sass/style.scss */
 .checkbox input[type="checkbox"] {
   position: absolute;
   display: block;
@@ -1198,21 +1169,21 @@ fieldset {
   opacity: 0;
   z-index: 1; }
 
-/* line 691, sass/style.scss */
+/* line 671, sass/style.scss */
 .checkbox label {
   display: inline-block;
   vertical-align: top;
   text-align: left;
   padding-left: 1.5em; }
 
-/* line 699, sass/style.scss */
+/* line 679, sass/style.scss */
 .checkbox label:before,
 .checkbox label:after {
   content: '';
   display: block;
   position: absolute; }
 
-/* line 705, sass/style.scss */
+/* line 685, sass/style.scss */
 .checkbox label:before {
   left: 0;
   top: 0;
@@ -1222,7 +1193,7 @@ fieldset {
   background: #fff;
   border-radius: 3px; }
 
-/* line 715, sass/style.scss */
+/* line 695, sass/style.scss */
 .checkbox label:after {
   content: '';
   position: absolute;
@@ -1235,15 +1206,15 @@ fieldset {
   opacity: 0;
   pointer-events: none; }
 
-/* line 728, sass/style.scss */
+/* line 708, sass/style.scss */
 .checkbox input:checked ~ label:after {
   opacity: 1; }
 
-/* line 732, sass/style.scss */
+/* line 712, sass/style.scss */
 .checkbox input:focus ~ label:before {
   background: #fefefe; }
 
-/* line 736, sass/style.scss */
+/* line 716, sass/style.scss */
 .headspace-item {
   white-space: nowrap;
   background-color: rgba(190, 190, 190, 0.3);
@@ -1258,7 +1229,7 @@ fieldset {
   transition: all 0.5s;
   margin-bottom: 10px; }
 
-/* line 747, sass/style.scss */
+/* line 727, sass/style.scss */
 .tag {
   background-color: transparent;
   border: none;
@@ -1270,13 +1241,13 @@ fieldset {
   margin: 0 0 0 32px;
   border: none;
   outline: none; }
-  /* line 758, sass/style.scss */
+  /* line 738, sass/style.scss */
   .tag:focus {
     outline: 0 none !important;
     box-shadow: none !important;
     border: none !important; }
 
-/* line 764, sass/style.scss */
+/* line 744, sass/style.scss */
 a.remove {
   color: #912702;
   padding: 0 5px;
@@ -1291,39 +1262,86 @@ a.remove {
   line-height: 1.5;
   height: 100%; }
 
-/* line 777, sass/style.scss */
+/* line 757, sass/style.scss */
 .headspace-left {
   float: left;
   width: 50%;
   padding-right: 50px;
   height: 100%; }
-  @media (max-width: 600px) {
-    /* line 777, sass/style.scss */
-    .headspace-left {
-      width: 100%; } }
 
-/* line 787, sass/style.scss */
+/* line 765, sass/style.scss */
 .headspace-right {
   float: right;
   width: 50%; }
-  @media (max-width: 600px) {
-    /* line 787, sass/style.scss */
-    .headspace-right {
-      width: 100%; } }
 
-/* line 799, sass/style.scss */
+/* line 775, sass/style.scss */
 #CommonTags .checkbox {
   margin: 0 0 10px 0;
   display: inline-block;
   width: 45%; }
 
-/* line 809, sass/style.scss */
+/* line 785, sass/style.scss */
 .btn.success {
   background-color: #4F861F;
   border-bottom: 6px solid #375d15; }
 
-/* line 814, sass/style.scss */
+/* line 790, sass/style.scss */
 .dim {
   color: #ACACAC;
   font-size: 22px;
   font-style: italic; }
+
+/* ==========================================================================
+   Temporary responsive stuff
+   ========================================================================== */
+@media (max-width: 920px) {
+  /* line 268, sass/style.scss */
+  /* line 803, sass/style.scss */
+  .experienceBlock {
+    width: 48%; } }
+@media (max-width: 550px) {
+  /* line 268, sass/style.scss */
+  /* line 807, sass/style.scss */
+  .experienceBlock {
+    width: 100%; } }
+@media (max-width: 970px) {
+  /* line 392, sass/style.scss */
+  /* line 812, sass/style.scss */
+  .callout {
+    float: none; } }
+@media (max-width: 970px) {
+  /* line 433, sass/style.scss */
+  /* line 817, sass/style.scss */
+  .intro p {
+    margin-bottom: 10px;
+    width: 100%;
+    float: none;
+    height: auto; } }
+@media (max-width: 450px) {
+  /* line 603, sass/style.scss */
+  /* line 825, sass/style.scss */
+  .filter-closed h4 {
+    float: none;
+    display: block; } }
+/* line 612, sass/style.scss */
+/* line 829, sass/style.scss */
+.filter-closed .filter-btn {
+  float: right;
+  cursor: pointer; }
+
+@media (max-width: 450px) {
+  /* line 612, sass/style.scss */
+  /* line 834, sass/style.scss */
+  .filter-closed .filter-btn {
+    float: none;
+    display: block; } }
+@media (max-width: 600px) {
+  /* line 777, sass/style.scss */
+  /* line 840, sass/style.scss */
+  .headspace-left {
+    width: 100%; } }
+@media (max-width: 600px) {
+  /* line 787, sass/style.scss */
+  /* line 845, sass/style.scss */
+  .headspace-right {
+    width: 100%; } }

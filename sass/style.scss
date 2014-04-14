@@ -281,15 +281,9 @@ header {
 	//@include transition(all 0.4s ease-in-out);
 	
 	position: relative;
-	@include breakpoint(max-width 920px) {
-		width: 48%;
+	
 
-	}
-
-	@include breakpoint(max-width 550px) {
-		width: 100%;
-
-	}
+	
 
 
 
@@ -415,10 +409,7 @@ header {
 			padding: 20px;
 		}
 	}
-	@include breakpoint(max-width 970px) {
-		float: none;
-
-	}
+	
 }
 section {padding: 100px 0;
 @include transition (all 0.3s);}
@@ -440,12 +431,7 @@ section {padding: 100px 0;
 		height: 230px;
 		margin-bottom: 0;
 		@include transition (all 0.3s);
-		@include breakpoint(max-width 970px) {
-			margin-bottom: 10px;
-			width: 100%;
-			float: none;
-			height: auto;
-		}
+		
 	}
 	//border-bottom: 1px dashed #acacac;
 
@@ -603,19 +589,13 @@ footer {
 	h4 {
 		display: inline-block;
 		float: left;
-		@include breakpoint(max-width 450px){
-			float: none;
-			display: block;
-		}
+		
 	}
 
 	.filter-btn {
 		float: right;
 		cursor: pointer;
-		@include breakpoint(max-width 450px){
-			float: none;
-			display: block;
-		}
+		
 	}
 }
 
@@ -779,17 +759,13 @@ a.remove {color: $accent1;
 	width: 50%;
 	padding-right: 50px;
 	height: 100%;
-	@include breakpoint(max-width 600px) {
-		width: 100%;
-	}
+	
 
 }
 .headspace-right {
 	float: right;
 	width: 50%;
-	@include breakpoint(max-width 600px) {
-		width: 100%;
-	}
+	
 
 }
 #CommonTags {
@@ -816,3 +792,57 @@ a.remove {color: $accent1;
 	font-size: 22px;
 	font-style: italic;
 }
+
+/* ==========================================================================
+   Temporary responsive stuff
+   ========================================================================== */
+
+
+@media (max-width: 920px) {
+    /* line 268, sass/style.scss */
+    .experienceBlock {
+      width: 48%; } }
+  @media (max-width: 550px) {
+    /* line 268, sass/style.scss */
+    .experienceBlock {
+      width: 100%; } }
+
+       @media (max-width: 970px) {
+    /* line 392, sass/style.scss */
+    .callout {
+      float: none; } }
+
+          @media (max-width: 970px) {
+      /* line 433, sass/style.scss */
+      .intro p {
+        margin-bottom: 10px;
+        width: 100%;
+        float: none;
+        height: auto; } }
+
+         @media (max-width: 450px) {
+    /* line 603, sass/style.scss */
+    .filter-closed h4 {
+      float: none;
+      display: block; } }
+/* line 612, sass/style.scss */
+.filter-closed .filter-btn {
+  float: right;
+  cursor: pointer; }
+  @media (max-width: 450px) {
+    /* line 612, sass/style.scss */
+    .filter-closed .filter-btn {
+      float: none;
+      display: block; } }
+
+       @media (max-width: 600px) {
+    /* line 777, sass/style.scss */
+    .headspace-left {
+      width: 100%; } }
+
+       @media (max-width: 600px) {
+    /* line 787, sass/style.scss */
+    .headspace-right {
+      width: 100%; } }
+
+
