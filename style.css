@@ -1,4 +1,4 @@
-/*
+/*!
 Theme Name: Rexipes Theme
 Theme URI: http://www.rexip.es
 Description: For Experiences!
@@ -352,17 +352,17 @@ fieldset {
   border-color: #c0c0c0;
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
-  border-top-width: 0.0625em;
   border-top-style: solid;
+  border-top-width: 0.0625em;
   padding-top: 0.4625em;
-  border-bottom-width: 0.0625em;
   border-bottom-style: solid;
+  border-bottom-width: 0.0625em;
   padding-bottom: 0.9125em;
-  border-left-width: 0.0625em;
   border-left-style: solid;
+  border-left-width: 0.0625em;
   padding-left: 0.875em;
-  border-right-width: 0.0625em;
   border-right-style: solid;
+  border-right-width: 0.0625em;
   padding-right: 0.875em; }
 
 /**
@@ -533,9 +533,13 @@ table {
 /* ==========================================================================
    Colors
    ========================================================================== */
-/* line 105, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%; }
+
+/* line 64, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
-  font-size: 100%;
+  font-size: 16px;
   line-height: 1.5em; }
 
 /* ==========================================================================
@@ -796,6 +800,8 @@ header {
   margin-bottom: 2.5%;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
   border-radius: 1px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -932,7 +938,7 @@ header {
 
 /* line 414, sass/style.scss */
 section {
-  padding: 100px 0;
+  padding: 50px 0;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -1118,10 +1124,6 @@ footer {
     background-color: #912702;
     cursor: pointer;
     width: 25px; }
-
-/* line 617, sass/style.scss */
-.filter-expand {
-  display: none; }
 
 /* line 623, sass/style.scss */
 button {
@@ -1345,3 +1347,11 @@ a.remove {
   /* line 845, sass/style.scss */
   .headspace-right {
     width: 100%; } }
+/* ==========================================================================
+PayPal Button Mod
+   ========================================================================== */
+/* line 852, sass/style.scss */
+.paypal-button {
+  width: auto;
+  border: none;
+  box-shadow: none; }

@@ -411,7 +411,7 @@ header {
 	}
 	
 }
-section {padding: 100px 0;
+section {padding: 50px 0;
 @include transition (all 0.3s);}
 .intro {
 	@include transition (all 0.5s);
@@ -614,9 +614,9 @@ footer {
 	
 }
 
-.filter-expand {
-	display: none;
-}
+// .filter-expand {
+// 	display: none;
+// }
 
 
  
@@ -845,4 +845,8 @@ a.remove {color: $accent1;
     .headspace-right {
       width: 100%; } }
 
+/* ==========================================================================
+PayPal Button Mod
+   ========================================================================== */
 
+.paypal-button {width: auto; border: none; box-shadow: none;}
